@@ -1,0 +1,28 @@
+<div id='container'>
+  
+  <section class="create">
+
+    <form name="postlyForm" id="postlyForm" ng-submit="addPost()">
+      <input name="author_name" 
+        ng-model="post.author_name"
+        placeholder="Name" />
+
+      <input name="title"
+        ng-model="post.title"
+        placeholder="Title"/>
+
+      <textarea name="content" ng-model="post.content" form="postlyForm" rows="4" cols="50">Create a Post...</textarea>
+
+      <button type="submit" value="Post">Post</button>
+    </form>
+
+  </section>
+
+  <section class="posts"> 
+    <article class="post" ng-repeat="post in data">
+      <h2 class="title">{{ post.title }}</h2>
+      <h5 class="author">{{ post.author_name }}</h5>
+      <p class="content">{{ post.content }}</p>
+    </article>
+  </section>
+</div>
