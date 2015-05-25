@@ -19,7 +19,7 @@
   </section>
 
   <section class="posts"> 
-    <article class="post" ng-repeat="post in data | orderBy:created_at:reverse">
+    <article class="post" ng-repeat="post in data.slice().reverse()">
       <h2 class="title">{{ post.title }}</h2>
       <h5 class="author">{{ post.author_name }}</h5>
       <p class="content">{{ post.content }}</p>

@@ -35,4 +35,6 @@ angular.module('postly.posts', [])
 
   $scope.getPosts();
 
+  setInterval($scope.getPosts.bind(this), 5000);
+
 });
